@@ -1,0 +1,16 @@
+{
+    "service": [
+     {
+        "name": "backend-service",
+        "port": 5000,
+        "tags": ["python", "flask", "aprilco"],
+        "check": {
+            "id": "http",
+            "name": "HTTP Check on port 5000",
+            "http": "http://localhost:5000",
+	    "method": "GET",
+            "interval": "10s"
+        }
+     }
+   ]
+}
